@@ -1,0 +1,376 @@
+/*Establecer colores*/
+
+:root{ /*Establecemos paleta de colores*/
+    --primary-color: #fcf4d0;
+    --primary-color-hard: #f5e392;
+    --secondary-color: #e0d494;
+    --secondary-color-hard: #beb05d;
+    --blanco-1: #ffff;
+    --blanco-2: #f8f5f5;
+    --gris-1: #e6e3e3;
+    --gris-2: #707070;
+}
+
+/*Establecer tipografía para modificar los componentes de bootstrap. A los componentes propios, le aplicamos directamente la tipografía a la clase para que después sea más fácil modificarlos*/
+
+.gm-font-type{
+    font-family: 'Karla', sans-serif; /*Colocar la tipografía que queremos*/
+}
+
+
+.color-tipografia{
+    color: var(--gris-2);
+}
+
+.bold{
+    font-weight: 700;
+}
+
+/*JUMBOTRON*/
+
+.jumbotron-marca{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 10rem);
+}
+.fondo-jumbotron{
+    width: 100%;
+    height: 30rem;
+    margin: auto;
+    background-image: url(../images/lucas-santos-wU2PEf1UVvM-unsplash-01.jpg);
+    background-size: cover;
+    filter: brightness(60%);
+    position: absolute; /*El position absolute permite que otros elementos ocupen el mismo espacio*/
+    z-index: -1; /*Con z-index "-1" lo mandamos para atrás*/
+}
+
+.container-logo{
+    grid-column: 1 / 13;
+    display: grid;
+}
+
+.imagen-logo{
+    width: 32%;
+    justify-self: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.botonera{
+    justify-self: center;
+}
+
+.gm-botones-jumbotron{
+    background-color: var(--primary-color);
+    color: var(--gris-2);
+    border-radius: 10px;
+    border: none;
+    padding: 0.6rem;
+    text-decoration: none;
+}
+
+.gm-botones-jumbotron:hover{
+    background-color: var(--primary-color-hard);
+    color: var(--gris-2);
+
+}
+
+.imagen-producto{
+    width: 25rem;
+    position: relative;
+    top: 6rem;
+    grid-column: 1 / 13;
+    justify-self: center;
+    
+}
+
+/*BOTÓN CLUB DEL VINO*/
+
+.boton-club-del-vino{
+    width: 90%;
+    max-height: 50rem;
+    margin: auto;
+    border-radius: 10px;
+    background-image: url(../images/yogendra-singh-7FjxbHnbibQ-unsplash-01.jpg);
+    background-size: cover;
+    padding: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 2rem;
+}
+
+@media (max-width: 700px){
+     
+    .boton-club-del-vino{
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        margin-top: 2rem;
+    }
+
+
+}
+
+.titulo-club-del-vino{
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+.texto-club-del-vino{
+    color: var(--primary-color);
+}
+
+.gm-botones-club-del-vino{
+    font-size: 1.2rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.6rem;
+    background-color: var(--primary-color);
+    color: var(--gris-2);
+    border-radius: 10px;
+    text-decoration: none;
+    justify-self: center;
+    align-self: center;
+}
+
+@media (max-width: 700px){
+     
+    .gm-botones-club-del-vino{
+        justify-self: end;  
+        font-size: 1rem;
+    }
+
+}
+
+/*DESCRIPCIÓN MARCA*/
+
+.descripcion-marca{
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.texto-descripcion-marca{
+    width: 100rem;
+    display: grid;
+
+}
+
+.titulo-marca{
+    font-size: 3rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 900;
+}
+
+.cuerpo-texto-marca{
+    font-size: 1rem;
+    font-family: 'Karla', sans-serif;
+}
+
+.titulo-descuento{
+    font-size: 1.5rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+}
+
+/*FORMULARIO*/
+
+.gm-botones-formulario{
+    font-family: 'Karla', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--gris-2);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.gm-botones-formulario:hover{
+    background-color: var(--secondary-color-hard);
+}
+
+.gm-botones-formulario:visited{
+    border: none;
+}
+
+.aviso-formulario{
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.terminos-link{
+    text-decoration: none;
+    color: var(--gris-2);
+    font-weight: 700;
+}
+
+.intereses-form{
+    margin-top: 1rem;
+}
+
+/*IMAGEN Y LÍNEA DIVISORIA*/ 
+
+.linea-divisoria{
+    width: 0.5rem;
+    height: 20rem;
+    background-color: var(--secondary-color);
+    color: var(--gris-2);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-self: center;
+}
+
+.imagen-descripcion-marca{
+    width: 110rem;
+    height: 48rem;
+    border-radius: 0.5rem;
+    background-image: url(../images/theme-photos-mR_lv_G7XCY-unsplash.jpg);
+    background-size: cover;
+    align-self: center;
+}
+
+/*CONTENEDOR MAPA*/
+
+.contenedor-mapa{
+    width: 90%;
+    margin: auto;
+    margin-top: 2.5rem;
+    display: grid;
+}
+
+.titulo-donde-estamos{
+    margin-bottom: 1.5rem;
+}
+
+.mapa{
+    width: 100%;
+    justify-self: center;
+    border-radius: 10px;
+}
+
+/*FOOTER*/
+
+.linea-divisoria-footer{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: 0.1rem;
+    background-color: var(--gris-1);
+}
+
+.footer-container{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1.5rem);
+
+}
+
+.copyright{
+    justify-self: center;
+    font-weight: 700;
+}
+
+.legales{
+    justify-self: center;
+    text-decoration: none;
+    color: var(--gris-2);
+}
+
+.legales:hover{
+    color: var(--secondary-color-hard);
+}
+
+.contactanos{
+    justify-self: center;
+}
+
+.redes-sociales{
+    font-size: 24px;
+    justify-self: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.bi{
+    color: var(--gris-2);
+}
+
+.bi:hover{
+    color: var(--secondary-color-hard);
+}
+
+/*MEDIA QUERY*/
+
+@media (max-width: 1100px){
+     
+    .titulo-marca{
+        font-size: 2.5rem;
+    }
+
+    .imagen-descripcion-marca{
+        
+        height: 44rem;
+    }
+     
+}
+
+@media (max-width: 900px){
+
+    .imagen-logo{
+        width: 25rem;
+    }
+
+    .titulo-marca{
+        font-size: 1.9rem;
+    }
+
+     
+}
+
+@media (max-width: 700px){
+
+    .jumbotron-marca{
+        grid-template-rows: repeat(4, 8rem);
+    }
+
+    .fondo-jumbotron{
+        height: 25rem;
+    }
+
+    .imagen-logo{
+        width: 18rem;
+        margin-bottom: 2rem;
+    }
+
+    .imagen-producto{
+        width: 20rem;
+    }
+
+    .descripcion-marca{
+        flex-wrap: wrap;
+    } 
+
+    .linea-divisoria{
+        width: 100%;
+        height: 0.1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .imagen-descripcion-marca{
+        height: 20rem;
+    }
+
+    .linea-divisoria-footer{
+        width: 100%;
+    }
+
+}
+
+

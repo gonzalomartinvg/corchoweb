@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/comentarios.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicom-01.png">
+    <title>Corcho, tienda de bebidas</title>
+</head>
+<body>
+    
+    <!-- MENÚ (bootstrap)-->
+
+    <nav class="navbar navbar-expand-lg bg-light gm-font-type">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">CORCHO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- deshabilitado 
+              <li class="nav-item">
+                <a class="nav-link" href="club-del-vino.html">Club del vino</a>
+              </li>
+            -->
+              <li class="nav-item">
+                <a class="nav-link" href="#ancla-mapa">¿Cómo llegar?</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!-- FIN MENÚ-->
+
+    <MAIN>
+
+        <!-- JUMBOTRON CON MARCA-->
+        
+        <div class="jumbotron-marca">
+
+            <div class="fondo-jumbotron"> </div>
+
+            <div class="container-logo">
+                <img class="imagen-logo" src="images/logo-corcho-01-01.png" alt="">
+
+                <div class="botonera"> <!-- MENÚ (bootstrap)-->
+                    <a class="gm-font-type gm-botones-jumbotron" href="">Whatsapp</a>
+                    <a class="gm-font-type gm-botones-jumbotron" href="#ancla-mapa">Dirección</a>
+                </div>
+            </div>
+
+            <img class="imagen-producto" src="images/vino-01.png" alt="botella de vino">
+
+        </div>
+        
+        <!-- FIN JUMBOTRON CON MARCA-->
+
+        <!-- BOTÓN CLUB DEL VINO-->
+
+        <!-- DESHABILITADO
+        <div class="boton-club-del-vino">
+
+          <div class="contenedor-texto-titulo-club-del-vino">
+
+            <h2 class="gm-font-type titulo-club-del-vino">Club del Vino</h2>
+          
+            <p class="gm-font-type texto-club-del-vino">Obtené la membresía de nuestro Club del Vino y recibí todos los meses en tu casa todos los mejores vinos seleccionados.</p>
+
+          </div>
+
+          <a class="gm-font-type gm-botones-club-del-vino" href="">Inscribirme</a>
+
+        </div>
+        -->
+
+        <!-- FIN BOTÓN CLUB DEL VINO-->
+
+        <!-- DESCRIPCIÓN MARCA Y FORMULARIO-->
+
+        <div class="descripcion-marca">
+
+            <div class="texto-descripcion-marca">
+                
+                <p class="titulo-marca color-tipografia">Lorem ipsum dolor</p>
+
+                <p class="cuerpo-texto-marca color-tipografia">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, distinctio eos vero maxime aut consectetur ab perspiciatis ratione laboriosam labore aperiam sint molestias voluptates rerum modi earum corrupti dignissimos vitae soluta voluptatem nobis a in ut laborum. Vitae, voluptates inventore quae explicabo incidunt maxime vel accusamus aliquam alias quod totam!</p>
+
+                <p class="titulo-descuento color-tipografia">Obtené un descuento</p>
+
+                <!-- Inicio formulario-->
+
+                <div class="row"> <!-- MENÚ (bootstrap)-->
+                      <div class="col-lg-10 col-md-10 mx-auto shadow border bg-white p-4 rounded">
+                          <form name="datos"> <!-- Este es el "name" del form del PUNTO 3-->
+                              <div id="form_alerts"></div> <!-- El ID de este div es el que está conectado con el mensaje de respuesta de que se envío correctamente. Ver el script al final de este html donde dice "form.addEventListener"-->
+                              <div class="form-group mb-3">
+                                  <label for="name" class="form-label color-tipografia">Nombre</label>
+                                  <input type="text" id="name" name="nombre" class="form-control" placeholder="Ingresá tu nombre" required>
+                              </div>
+                              <div class="form-group mb-3">
+                                  <label for="email" class="form-label color-tipografia">Email</label>
+                                  <input type="email" id="email" name="email" class="form-control" placeholder="Ingresá tu email" required>
+                              </div>
+                                  <label for="text" class="form-label color-tipografia">Teléfono</label>
+                                  <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Ingresá tu teléfono" required>
+                              <div>
+                              </div>
+                                <label for="interes" class="form-label color-tipografia intereses-form">¿Qué bebidas te interesan?</label>
+                                <select type="text" id="interes" name="interes" class="form-control color-tipografia" required>
+                                    <option hidden value="elegi-bebida">Elegí una bebida</option>
+                                    <option value="cervezas">Cervezas</option>
+                                    <option value="vinos">Vinos</option>
+                                    <option value="destilados">Destilados</option>
+                                    <option value="fernet">Fernet</option>
+                                    <option value="todas">todas</option>
+                                    <option value="ninguna">ninguna</option>
+                                </select>
+                              <div>
+                                <p class="aviso-formulario">Al envíar los datos, aceptás los <a class="terminos-link" href="legales.html">términos y condiciones</a>.</p>
+                                  <button class="mt-3 gm-botones-formulario" type="submit">Enviar</button>
+                              </div>
+
+                          </form>
+                      </div>
+                </div>
+
+                <!-- Fin formulario-->
+              
+            </div>
+
+            <span class="linea-divisoria"></span>
+
+            <div class="imagen-descripcion-marca"></div>
+
+        </div>
+
+        <!-- FIN DESCRIPCIÓN MARCA Y FORMULARIO-->
+
+        <!-- MAPA-->
+
+        <div class="contenedor-mapa">
+
+          <h2 class="titulo-donde-estamos color-tipografia" id="ancla-mapa">¿Dónde estamos?</h2>
+
+          <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11038.797175637366!2d-58.486082428704584!3d-34.658389030803086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9e384761f47%3A0xacbb4d0de6c15e55!2sCorcho%20-%20Almac%C3%A9n%20de%20Bebidas!5e0!3m2!1ses-419!2sar!4v1676153326492!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+         <!-- FIN MAPA-->
+
+         <!-- COMENTARIOS-->
+
+         <div class="contenedor-google">
+
+            <div class="contenedor-logo">
+              <img class="logo-google" src="images/google.png" alt="estrellas de puntuación">
+            </div>
+
+          <div class="contenedor-titulo-estrellas">
+            <h3 class="titulo-comentarios">4.5 <img class="estrellas-totales" src="images/estrellas.png" alt=""></h3> 
+            <a href="https://www.google.com/search?q=corcho+almacen+de+bebidas&oq=corcho+&aqs=chrome.0.69i59j69i57j69i59j0i20i131i263i433i512j0i512j69i61l3.11413j0j4&sourceid=chrome&ie=UTF-8#" class="cantidad-opiniones">32 opiniones</a>
+          </div>
+
+        </div>
+
+       <div class="contenedor-comentario-macro">
+          <div class="modificador anterior"><</div>
+          <div class="contenedor-comentario-micro">
+            <div class="contenedor-foto-y-nombre">
+              <img class="imagen-profile" src="" alt="estrellas de puntuación">
+              <h2 class="nombre"></h2>
+            </div>
+            <img class="estrellas" src="" alt="estrellas de puntuación">
+            <p class="comentario"></p>
+          </div>
+          <div class="modificador proximo">></div>
+       </div>
+
+         <!-- FIN COMENTARIOS-->
+
+    </MAIN>
+
+    <footer>
+
+      <div class="linea-divisoria-footer"></div>
+
+      <div class="footer-container">
+
+        <a class="legales" href="">Legales</a>
+
+        <p class="copyright">© 2022 A Los Pedazos Agencia Digital.</p>
+        <p class="contactanos">Si te gustó esta web, contáctanos.</p>
+
+        <div class="redes-sociales">
+          <a href=""><i class="bi bi-whatsapp"></i></a>
+          <a href=""><i class="bi bi-globe2"></i></a>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyBd74kFMRSNZR25QwWjC04V6r0dmGNL6Fuhk_360Ca9wk6gvDs4M8Akzs8KxHvC__UnA/exec'
+        const form = document.forms['datos']
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => $("#form_alerts").html("<div class='alert alert-success'>¡Listo! Obtuviste un 10% de descuento para tu próxima compra. Hace un print de pantalla y mostralo en tu próxima visita. <span class='bold'>Esta promoción solo es válida una vez por cliente, si ya usaste un cupón con anterioridad no podrás usar este.</span> </div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Los datos no fueron enviados.</div>"))
+        })
+    </script>
+
+    <script src="js/comentarios.js"></script>
+    
+</body>
+</html>

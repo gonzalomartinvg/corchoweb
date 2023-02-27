@@ -1,0 +1,89 @@
+.contenedor-google{
+    width: 90%;
+    margin: auto;
+    margin-top: 2.5rem;
+    display: flex;
+}
+
+@media (max-width: 600px){
+     
+    .contenedor-google{
+        width: 50%;
+    }
+}
+
+.logo-google{
+   width: 4rem;
+}
+
+.contenedor-titulo-estrellas{
+    width: 90%;
+    margin: auto;
+}
+
+.estrellas-totales{
+    width: 6rem;
+}
+
+.cantidad-opiniones{
+    text-decoration: none;
+}
+
+
+.contenedor-comentario-macro{
+    width: 90%;
+    margin: auto;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    grid-gap: 15rem;
+}
+
+@media (max-width: 850px){
+     
+    .contenedor-comentario-macro{
+        grid-gap: 1rem;
+    }
+}
+
+.modificador{
+    font-size: 4rem;
+    align-self: center;
+    color: var(--gris-2);
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+     
+    .modificador{
+        font-size: 3rem;
+    }
+}
+
+.contenedor-comentario-micro{
+    width: 18rem;
+    border: 1px solid var(--gris-1);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.8rem 0.2rem rgb(99, 99, 99);
+}
+
+.estrellas{
+    width: 7rem;
+}
+
+.contenedor-foto-y-nombre{
+    width: 100%;
+    display: flex;
+    grid-gap: 1rem;
+}
+
+.nombre{
+    font-size: 1.3rem;
+    align-self: center;
+}
+
+.imagen-profile{
+    width: 3.5rem;
+    align-self: center;
+}
