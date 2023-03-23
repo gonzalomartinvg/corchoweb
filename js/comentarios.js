@@ -85,26 +85,45 @@ const comentarios = {
 let anterior = document.querySelector(".anterior");
 let proximo = document.querySelector(".proximo");
 
-let imagen = document.querySelector(".imagen-profile");
-let nombre = document.querySelector(".nombre");
-let estrellas = document.querySelector(".estrellas");
-let comentario = document.querySelector(".comentario");
+let contador = 0; //Indica que comentario se debe mostrar en la página
 
-let contador = 0;
+//FUNCIÓN MOSTRA DATOS
 
-//FUNCIONES
-
-function mostrarDatos(){
+function mostrarDatos(a){
     
-    function chequearDatos (a){
-        imagen.src = a[0].imagen;
-        nombre.textContent = a[0].nombre;
-        estrellas.src = a[0].estrellas;
-        comentario.textContent = a[0].comentario;
+    function chequearDatos (b){
+
+    let contenedorAutogeneradorDeComentarios = document.querySelector(".contenedor-autogenerador-de-comentarios"); //Seleccionamos el div donde vamos a introducir
+
+    contenedorAutogeneradorDeComentarios.innerHTML = "" //Borramos el div ya existente dentro del contenedor
+
+    const divCreadoComentario = document.createElement("div"); //Creamos el div nuevo a introducir en el contenedor
+                
+    const contenidoAutoGeneradoComentario = //Generamos el contenido del div. Las `` siguientes se utilizan para hacer un html literal- El parametro "a" corresponde a la clase que india si el div con el comentario ingresa o sale, es decir, da la animación.
+                    `
+                    
+                    <div class="contenedor-comentario-micro ${a}">
+                        <div class="contenedor-foto-y-nombre">
+                            <img class="imagen-profile" src="${b[0].imagen}" alt="estrellas de puntuación">
+                            <h2 class="nombre">${b[0].nombre}</h2>
+                        </div>
+                        <img class="estrellas" src="${b[0].estrellas}" alt="estrellas de puntuación">
+                        <p class="comentario">${b[0].comentario}</p>
+                    </div>
+                
+                
+                    `; 
+
+    divCreadoComentario.innerHTML = contenidoAutoGeneradoComentario; //Le atribuimos el html al div.
+
+    contenedorAutogeneradorDeComentarios.append(divCreadoComentario); //Se lo adjudicamos a la sección autogenerada
+
     }
+
+    //Con los siguientes condicionales indicamos que información de comentario tiene que tomar
     
     if (contador == 0){
-        chequearDatos(comentarios.comentario0);
+        chequearDatos(comentarios.comentario0)
     }
     
     if (contador == 1){
@@ -126,6 +145,8 @@ function mostrarDatos(){
 
 mostrarDatos(); //La ejecutamos para que apenas abrimos la página funcione con el 0
 
+//FUNCIONES ANTERIOR Y PRÓXIMO
+
 proximo.addEventListener ("click", suma1);
 
 function suma1(){
@@ -138,7 +159,7 @@ function suma1(){
         contador += 1;
     }
 
-    mostrarDatos();
+    mostrarDatos("contenedor-comentario-micro-ingresa");
 }
 
 anterior.addEventListener ("click", resta1);
@@ -153,7 +174,7 @@ function resta1(){
         contador -= 1;
     }
 
-    mostrarDatos();
+    mostrarDatos("contenedor-comentario-micro-sale");
 }
 
 

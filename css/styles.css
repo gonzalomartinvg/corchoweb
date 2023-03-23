@@ -158,6 +158,10 @@
 
 }
 
+.centrar-texto{
+    text-align: center;
+}
+
 .titulo-marca{
     font-size: 3rem;
     font-family: 'Karla', sans-serif;
@@ -225,7 +229,7 @@
 
 .imagen-descripcion-marca{
     width: 110rem;
-    height: 48rem;
+    height: 49rem;
     border-radius: 0.5rem;
     background-image: url(../images/theme-photos-mR_lv_G7XCY-unsplash.jpg);
     background-size: cover;
@@ -274,6 +278,15 @@
 .copyright{
     justify-self: center;
     font-weight: 700;
+    text-decoration: none;
+    color: var(--gris-2);
+}
+
+.copyright:hover{
+    justify-self: center;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--secondary-color-hard);
 }
 
 .legales{
@@ -288,6 +301,7 @@
 
 .contactanos{
     justify-self: center;
+    color: var(--gris-2);
 }
 
 .redes-sociales{

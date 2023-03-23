@@ -61,11 +61,65 @@
 }
 
 .contenedor-comentario-micro{
-    width: 18rem;
+    width: 15rem;
     border: 1px solid var(--gris-1);
     border-radius: 10px;
     padding: 1rem;
     box-shadow: 0.3rem 0.3rem 0.8rem 0.2rem rgb(99, 99, 99);
+}
+
+.contenedor-comentario-micro-ingresa{
+    width: 15rem;
+    border: 1px solid var(--gris-1);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.8rem 0.2rem rgb(99, 99, 99);
+
+   
+    position: relative;
+    animation-name: movimientoIngresa;
+    animation-duration: 6s; /*La duración debe ser la misma que indicamos en javascript
+    z-index: 1; */
+}
+
+@keyframes movimientoIngresa {
+    0% {left: 7rem; opacity: 0;}
+    30% {left: 0rem; opacity: 1;}
+}
+
+@media (max-width: 600px){
+     
+    @keyframes movimientoIngresa {
+        0% {left: 2rem; opacity: 0;}
+        20% {left: 0rem; opacity: 1;}
+    }
+}
+
+.contenedor-comentario-micro-sale{
+    width: 15rem;
+    border: 1px solid var(--gris-1);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.8rem 0.2rem rgb(99, 99, 99);
+
+   
+    position: relative;
+    animation-name: movimientoSale;
+    animation-duration: 6s; /*La duración debe ser la misma que indicamos en javascript
+    z-index: 1; */
+}
+
+@keyframes movimientoSale {
+    0% {right: 7rem; opacity: 0;}
+    30% {right: 0rem; opacity: 1;}
+}
+
+@media (max-width: 600px){
+     
+    @keyframes movimientoSale {
+        0% {right: 2rem; opacity: 0;}
+        20% {right: 0rem; opacity: 1;}
+    }
 }
 
 .estrellas{
