@@ -57,6 +57,12 @@
     text-align: center;
 }
 
+@media (max-width: 600px) {
+    .lista-legales {
+      width: 90%;
+    }
+  }
+
 .elemento-lista{
     margin-bottom: 1.5rem;
 }

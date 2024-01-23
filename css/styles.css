@@ -9,6 +9,7 @@
     --blanco-2: #f8f5f5;
     --gris-1: #e6e3e3;
     --gris-2: #707070;
+    --gris-3: #353535;
 }
 
 /*Establecer tipografía para modificar los componentes de bootstrap. A los componentes propios, le aplicamos directamente la tipografía a la clase para que después sea más fácil modificarlos*/
@@ -92,7 +93,7 @@
     max-height: 50rem;
     margin: auto;
     border-radius: 10px;
-    background-image: url(../images/fondo-boton-club-del-vino.webp);
+    background-image: url(../images/fondo-boton-club-del-vino-2.jpg);
     background-size: cover;
     padding: 1.5rem;
 
@@ -127,7 +128,7 @@
     height: fit-content;
     padding: 0.6rem;
     background-color: var(--primary-color);
-    color: var(--gris-2);
+    color: var(--gris-3);
     border-radius: 10px;
     text-decoration: none;
     justify-self: center;
