@@ -32,7 +32,7 @@
     width: 100%;
     height: 8rem;
     margin: auto;
-    background-image: url(images/lucas-santos-wU2PEf1UVvM-unsplash-01.jpg);
+    background-image: url(../images/fondo-boton-club-del-vino.webp);
     background-size: cover;
     filter: brightness(60%);
     position: absolute; /*El position absolute permite que otros elementos ocupen el mismo espacio*/
@@ -48,15 +48,158 @@
     font-weight: 900;
 }
 
-/*LISTADO LEGAL (adaptar el margin bottom de lista-legales, según corresponda para que el FOOTER quede al final de todo*/
+/*Introducción*/
 
-.lista-legales{
-    width: 50%;
+.body-introduccion{
+    width: 90%;
     margin: auto;
-    margin-top: 7rem;
+    margin-top: 3.5rem;
+    text-align: center;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+
+@media (max-width: 600px) {
+    .body-introduccion {
+        margin-top: 5rem;
+    }
+  }
+
+.titulo-body-introduccion{
+    color: var(--gris-2);
+}
+
+.color-secondary{
+    color: var(--secondary-color);
+}
+
+.color-terciary{
+    color: var(--secondary-color-hard);
+}
+
+.info{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-introduccion{
     text-align: center;
 }
 
-.elemento-lista{
-    margin-bottom: 1.5rem;
+.contenedor-boton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.boton-formulario{
+    padding: 0.5rem;
+    border: solid 1px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/*TEXTO y CALL TO ACTION (adaptar el margin bottom del último elemento, según corresponda para que el FOOTER quede al final de todo*/
+
+.contenedor-info-imagen{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .contenedor-info-imagen {
+        grid-template-columns: 1fr;
+    }
+  }
+
+.contenedor-imagen{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-club-del-vino-2{
+    width: 20rem;
+}
+
+@media (max-width: 600px) {
+    .imagen-club-del-vino-2 {
+        width: 15rem;
+    }
+  }
+
+
+.gm-botones-club-del-vino{
+    background-color: var(--primary-color);
+    color: var(--gris-2);
+    border-radius: 10px;
+    border: none;
+    padding: 0.6rem;
+    text-decoration: none;
+}
+
+.gm-botones-club-del-vino:hover{
+    background-color: var(--primary-color-hard);
+    color: var(--gris-2);
+
+}
+
+/*Tarjeta*/
+
+
+.tarjeta{
+    width: fit-content;
+    margin: auto;
+    background-color: var(--blanco-1);
+    box-shadow: 2px 2px 1px 1px rgba(158, 157, 157, 0.2);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    justify-items: center;
+}
+
+.titulos-tarjetas{
+    width: 100%;
+    margin: auto;
+    display: grid;
+}
+
+.titulo-1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.precio{
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.bajada{
+    font-size: 1.2rem;
+}
+
+.listado-tarjetas-contenedor{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.elemento-lista-tarjeta{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    grid-gap: 0.5rem;
 }

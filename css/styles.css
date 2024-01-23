@@ -38,7 +38,7 @@
     width: 100%;
     height: 30rem;
     margin: auto;
-    background-image: url(../images/lucas-santos-wU2PEf1UVvM-unsplash-01.jpg);
+    background-image: url(../images/fondo-boton-club-del-vino.webp);
     background-size: cover;
     filter: brightness(60%);
     position: absolute; /*El position absolute permite que otros elementos ocupen el mismo espacio*/
@@ -92,7 +92,7 @@
     max-height: 50rem;
     margin: auto;
     border-radius: 10px;
-    background-image: url(../images/yogendra-singh-7FjxbHnbibQ-unsplash-01.jpg);
+    background-image: url(../images/fondo-boton-club-del-vino.webp);
     background-size: cover;
     padding: 1.5rem;
 
@@ -132,6 +132,11 @@
     text-decoration: none;
     justify-self: center;
     align-self: center;
+}
+
+.gm-botones-club-del-vino:hover{
+    background-color: var(--primary-color-hard);
+    color: var(--gris-2);
 }
 
 @media (max-width: 700px){
@@ -318,6 +323,7 @@
 .bi:hover{
     color: var(--secondary-color-hard);
 }
+
 
 /*MEDIA QUERY*/
 
